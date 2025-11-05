@@ -1,6 +1,7 @@
 const { merge } = require('webpack-merge');
 const baseConfig = require('./webpack.base');
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 /**
  * 开发环境webpack配置
@@ -33,5 +34,10 @@ module.exports = merge(baseConfig, {
         }
     }
   },
-  plugins: []
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].css',
+      chunkFilename: 'css/[name].css'
+    })
+  ]
 });

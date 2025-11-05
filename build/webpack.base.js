@@ -90,7 +90,7 @@ module.exports = {
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          process.env.NODE_ENV === 'production' ? MiniCssExtractPlugin.loader : 'style-loader',
+          MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader',
           {
