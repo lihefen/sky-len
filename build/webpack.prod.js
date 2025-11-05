@@ -3,6 +3,7 @@ const baseConfig = require('./webpack.base');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+console.log(TerserPlugin);
 /**
  * 生产环境webpack配置
  * @type {import('webpack').Configuration}
