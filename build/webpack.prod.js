@@ -1,7 +1,8 @@
 const { merge } = require('webpack-merge');
 const baseConfig = require('./webpack.base');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// console.log(baseConfig);
+const TerserPlugin = require('terser-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 /**
  * 生产环境webpack配置
  * @type {import('webpack').Configuration}
